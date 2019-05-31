@@ -1,0 +1,15 @@
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+
+{% extends 'bootstrap/base.html'%}
+
+<!-- Navbar block  -->
+{% block navbar %}
+{% include 'navbar.html' %}
+{% endblock %}
+
+<!-- Working with timestamps using flask moment -->
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
