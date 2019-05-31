@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+{% endblock %}
+
+<!-- Content block -->
+{% block content %}
+
+<div class="container space">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="title"> <b>Techie Talk</b> </h1>
+            <p class="title"> A blog by Joseph Muema bringing you the latest trends in technology </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4> <i>{{quote}}</i> </h4>
+            <p><b> ~ {{ quote_author }} </b></p>
+
+            {% if current_user.is_authenticated %}
+            <p><a href="{{url_for('main.blogs')}}"><button class="button bview">View Blogs</button></p>
+            {% else %}
+            <div class="top">
+                <a href="{{url_for('auth.login')}}"><button class="button bsign">Writer Log In</button>
+                <a href="{{url_for('main.blogs')}}"><button class="button bview">View Blogs</button>
+            </div>
+            {%endif%}
+        </div>
+    </div>
+</div>
+
+{% endblock%}
