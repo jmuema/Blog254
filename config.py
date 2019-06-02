@@ -6,7 +6,7 @@ class Config:
     """
     SECRET_KEY ='muema'
     UPLOADED_PHOTOS_DEST= 'app/static/photos'  # storage location of photos
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MuemA25@localhost/blogger'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MuemA25@localhost/blog254'
 
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
@@ -29,7 +29,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configration class with General configuration settings
     """
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MUemA25@localhost/blogger'    
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MUemA25@localhost/blog254'    
 
 class DevConfig(Config):
     """
@@ -37,7 +37,7 @@ class DevConfig(Config):
     Args:
          Config: The parent configuration class with General configuration settings
     """
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MuemA25@localhost/blogger'
+    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://joseph:25MuemA25@localhost/blog254'
     DEBUG = True
 
 # Dictionary that helps us access the different configuration option classes

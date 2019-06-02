@@ -1,15 +1,41 @@
-<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
 
+<!-- Styles block -->
+{% block styles %}
 
-{% extends 'bootstrap/base.html'%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/profile.css')}}">
 
-<!-- Navbar block  -->
-{% block navbar %}
-{% include 'navbar.html' %}
 {% endblock %}
 
-<!-- Working with timestamps using flask moment -->
-{% block scripts %}
-    {{ super() }}
-    {{ moment.include_moment() }}
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        <!-- displaying name-->
+        <div class="col-md-4">
+            <h1 class="proftitle"> Writer Profile </h1>
+           
+            <!--displaying photo-->
+            <div class="col-md-4">
+                <div class="profilepic">
+                    <img src="{{url_for('static',filename='default.jpeg')}}" alt="myprofilepic" class="img-thumbnail imgsize">
+                </div>
+                <h3 class="name"> <b>{{writer.name| capitalize}}</b></h3>
+                <p class="email"> {{writer.email}} </p>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <!--display blog creation-->
+
+            <h1 class="blogtitle"> Enter your blog </h1>
+         
+            {{ wtf.quick_form(blog_form) }}
+        </div>
+
+    </div>
+</div>
+
 {% endblock %}

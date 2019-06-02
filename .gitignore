@@ -1,10 +1,1 @@
-virtual/
 *.pyc
-.env
-__pycache__/
-*.pyc
-instance/
-.vscode/
-.idea
-get-pip.py
-start.sh

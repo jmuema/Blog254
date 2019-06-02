@@ -22,7 +22,7 @@
         <div class="col-md-8">
             <p> {{blog.blog | truncate(70) }} </p>
             <div class='spacing'>
-                <p class="blog"> Posted {{ moment(blog.timestamp).fromNow() }} </p>
+               
                 <a href="{{url_for('main.oneblog', b_id = blog.id)}}">
                     <p class="link"> Read More </p>
                 </a>
