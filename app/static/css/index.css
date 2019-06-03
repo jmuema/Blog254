@@ -1,5 +1,7 @@
 .title{
   text-align: center;
+  font-family: 'Graduate', cursive;
+  color: red;
 }
 .button{
   display: inline-block;
