@@ -16,7 +16,6 @@ Written by *Joseph Muema*. My first attempt at interating psql into my flask app
 2. Create a new writer account using this link to maneuver through the application as a writer:                                                https://thelastblog.herokuapp.com/authenticate/register
 This will ensure only authorized writers can post blogs on the application
 
-
 ## Behaviour Driven Development
 
 | Behavior our program should handle | Input description |  Output description
@@ -30,7 +29,6 @@ This will ensure only authorized writers can post blogs on the application
 ### Contact Information
 
 To reach me, email me at: > jmuema95@gmail.com
-
 
 ### License
 MIT License
